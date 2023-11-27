@@ -1,7 +1,9 @@
-function makeArray(firstArray, secondArray, maxLength) {
-  let joinedArray = firstArray.concat(secondArray);
-  if (joinedArray.length > maxLength) {
-    joinedArray.length = maxLength;
+function calcAverageCalories(days) {
+    let totalCalories = 0;
+
+    for (let i = 0; i < days.length; i++) {
+      totalCalories += days[i].calories;
     }
-    return (joinedArray);
- }
+  
+    return totalCalories / days.length;
+}

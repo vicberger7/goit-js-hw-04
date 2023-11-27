@@ -1,11 +1,14 @@
-function filterArray(numbers, value) {
-    const newArray = [];
+const profile = {
+    username: "Jacob",
+  playTime: 300,
+changeUsername(newName) {
+    this.username = newName;
+},
+updatePlayTime(hours) {
+  this.playTime += hours;
+},
+getInfo() {
+  return `${this.username} has ${this.playTime} active hours!`;
+},
+};
 
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] > value) {
-            newArray.push(numbers[i]);
-        }
-    }
-
-    return newArray;
-}
